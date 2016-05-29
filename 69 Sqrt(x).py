@@ -1,4 +1,8 @@
+# 牛顿迭代
 class Solution(object):
     
     def mySqrt(self, x):
-        return int(math.sqrt(x))
+        t = x
+        while t * t > x:
+            t = (t + x / t) / 2
+        return t
